@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@custom-variant light (&:where(.light, .light *));
+
+  :root {
+    --color-bg: #0D1117; /*color negro de fondo*/
+    --color-text: #FFFFFF;
+    --color-muted: #8892B0;    /* Para textos secundarios como "I'm" */
+    --gradient-main: linear-gradient(to top, #385687 0%, #0D1117 100%);  
+    /* --color-highlight: #E3FF6A; */
+
+  }
+
+  /* Se agrego la nueva interaccion del modo claro*/
+.light{
+    --color-bg: #ffffff;
+    --color-text: #0F172A;
+    --color-muted: #475569;    /* Textos secundarios se vuelven gris oscuro */
+    /* --gradient-main: linear-gradient(135deg, #E2E8F0 0%, #F8FAFC 100%); */
+    --gradient-main: linear-gradient(to top #F1F5F9 0%, #FFFFFF 100%);
+}
+
+/*se modifico las bariables del body */
+  body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      transition: all 0.3s ease;
+  }
+
+.section {
+      background: var(--gradient-main);
+      transition: all 0.3s ease;
+  }

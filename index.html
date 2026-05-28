@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en" class="">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="./scripts/objetoInfo.js"></script>
+  <script type="module" src="./scripts/lightmode .js"></script>
+  <!--llamado de iconos font-awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>portafolio-web</title>
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header class="mx-auto w-full max-w-5/6 lg:max-w-7xl flex items-center justify-between p-4 lg:py-6">
+    <img class="w-16 sm:w-20 md:w-23 lg:w-24 xl:w-27" src="./assets/img/logo.png" alt="logo personal" />
+    <div id="btn-mobile" class="md:hidden text-3xl cursor-pointer">☰</div>
+    <!--Aun le falta el js para que funcione el menu de hamburguesa-->
+    <nav id="menu-links"
+      class="light:text-gray-500 hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full md:w-auto md:bg-transparent items-center gap-4 lg:gap-12 xl:gap-16 font-semibold p-6 md:p-0">
+      <a class="light:hover:underline light:hover:text-black uppercase hover:text-[#d9ff5b]" href="./index.html"> Home</a>
+      <a class="light:hover:underline light:hover:text-black uppercase hover:text-[#d9ff5b]" href="#skills"> skills</a>
+      <a class="light:hover:underline light:hover:text-black uppercase hover:text-[#d9ff5b]" href="#project">Projects</a>
+    </nav>
+    <button type="submit"
+      class="light:border-gray-300 light:text-gray-500 light:hover:bg-gray-300 flex items-center gap-2 border-2 border-white/20 rounded-full pl-3 pr-1 py-1 sm:pl-5 lg:pl-7 lg:py-1.5 hover:bg-gray-700 transition-all">
+      <a href="#forms">
+        <span class="text-[10px] sm:text-xs  md:text-sm lg:text-base uppercase font-semibold">contact</span>
+      </a>
+      <div
+        class="bg-[#d9ff5b] text-black rounded-full w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 flex items-center justify-center">
+        <!--icono de Heroicons-->
+        <svg class="w-3 sm:w-5 lg:w-6 h-3 sm:h-5 lg:h-6-" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" />
+        </svg>
+      </div>
+    </button>
+
+    <!--Boton de light Mode(modo claro) -->
+    <button id="btnLightMode" class=" light:text-gray-900 text-[#d9ff5b]">
+      <div class="light:bg-gray-300 border-2 border-white/20 w-10 rounded-full  hover:bg-gray-700 p-0.5">
+        <a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+          viewBox="0 0 24 24">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0a3.75 3.75 0 0 1 7.5 0" />
+        </svg>
+        </a>
+      </div>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <section 
+    class="section relative min-h-fit lg:min-h-[85vh] flex flex-col items-center pt-7 pb-5 px-4 overflow-hidden">
+    <h1
+      class="text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-bold flex flex-wrap justify-center gap-2 text-center -mt-3">
+      I'm <span class="light:text-yellow-200 text-[#E3FF6A]">Jose Guadalupe</span>
+    </h1>
+    <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold flex items-center justify-center gap-2 mt-2">
+      <span class="border rounded-full border-white/20 px-4 py-0.5 text-2xl sm:text-4xl lg:text-5xl">Frontend</span>
+      Developer
+    </h2>
+
+    <div class="relative flex justify-center items-center mt-3 w-full max-w-6xl">
+      <img class="w-64 sm:w-80 md:w-96 lg:w-112.5 drop-shadow-[0_0_50px_rgba(227,255,106,0.6)] object-contain z-10"
+        src="./assets/img/perfil_programador.png" alt="foto del desarrollador" />
+    </div>
+
+    <div class="relative z-20 -mt-16 sm:-mt-24 lg:-mt-32 xl:-mt-40">
+      <button
+        class="light:bg-yellow-200 light:text-gray-700 bg-[#E3FF6A] rounded-full w-60 py-3 uppercase text-black font-bold hover:scale-105 transition-transform"
+        type="submit">
+        <a target="_blank" href="https://practica-calificada-3-2kkjac9sn-guadalupe1980s-projects.vercel.app/">
+          My Projects</a>
+      </button>
+    </div>
+    <!--card con barras de nivel-->
+    <div
+      class="light:bg-gray-300 light:hover:bg-transparent  hidden md:block absolute md:right-[-5%] lg:right-0 xl:right-20 -translate-y-1/2 top-1/2 rotate-6 bg-[#1E293B] uppercase font-semibold border border-white/10 rounded-2xl p-4 w-64 lg:w-72 h-40 shadow-xl/70 hover:bg-gray-900 z-20 transition-all">
+      <p class="p-2 text-sm">My expertise</p>
+      <!--1ra barra-->
+      <div class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase">
+        <span class="light:text-gray-700 w-20">Frontend</span>
+        <div class="relative flex-1 h-0.5 bg-gray-700">
+          <div class="absolute h-full bg-[#E3FF6A] w-[90%]"></div>
+          <div class="absolute w-3 h-3 bg-[#E3FF6A] rounded-full -top-1.25 left-[90%] shadow-[0_0_10px_#E3FF6A]"></div>
+        </div>
+        <span class="light:text-gray-700 w-8">90%</span>
+      </div>
+      <!--2da barra-->
+      <div class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase">
+        <span class="light:text-gray-700 light:text-gray-700x w-20">Backend</span>
+        <div class="relative flex-1 h-0.5 bg-gray-700">
+          <div class="absolute h-full bg-[#E3FF6A] w-[75%]"></div>
+          <div class="absolute w-3 h-3 bg-[#E3FF6A] rounded-full -top-1.25 left-[75%] shadow-[0_0_10px_#E3FF6A]"></div>
+        </div>
+        <span class="light:text-gray-700 w-8">75%</span>
+      </div>
+      <!--3ra barra-->
+      <div class="flex items-center gap-4 text-xs font-bold text-gray-400 uppercase">
+        <span class="light:text-gray-700 w-20">tailwindcss</span>
+        <div class="relative flex-1 h-0.5 bg-gray-700">
+          <div class="absolute h-full bg-[#E3FF6A] w-[50%]"></div>
+          <div class="absolute w-3 h-3 bg-[#E3FF6A] rounded-full -top-1.25 left-[50%] shadow-[0_0_10px_#E3FF6A]"></div>
+        </div>
+        <span class="light:text-gray-700 w-8">50%</span>
+      </div>
+      <!--4ta barra-->
+      <div class="light:text-gray-700 flex items-center gap-4 text-xs font-bold text-gray-400 uppercase">
+        <span class="light:text-gray-700 w-20">SQL</span>
+        <div class="relative flex-1 h-0.5 bg-gray-700">
+          <div class="absolute h-full bg-[#E3FF6A] w-[95%]"></div>
+          <div class="absolute w-3 h-3 bg-[#E3FF6A] rounded-full -top-1.25 left-[95%] shadow-[0_0_10px_#E3FF6A]"></div>
+        </div>
+        <span class="w-8">95%</span>
+      </div>
+    </div>
+    <div
+      class="light:bg-gray-300 light:hover:bg-transparent  hidden md:block absolute md:left-[-5%] lg:left-0 xl:left-22 top-[40%] -rotate-7 bg-[#1E293B] uppercase font-semibold border border-white/10 rounded-2xl p-4 w-64 lg:w-72 h-44 shadow-xl/70 hover:bg-gray-900 z-20 transition-all">
+      <p class="p-2 text-sm">Client Review from Tabasco</p>
+      <span class="light:text-gray-700  px-2 text-[12px] text-white/60 lowercase leading-relaxed">
+        Working with Jose was an incredible experience. He understood
+        perfectly what we needed and gave it that professional touch we were
+        looking for.
+      </span>
+    </div>
+  </section>
+
+  <!-- Estructura del contenido -->
+  <main>
+    <section class=" relative min-h-fit py-20 px-6">
+      <article class="flex flex-col items-center justify-center max-w-5xl mx-auto relative">
+        <h3 class="light:text-black text-[#E3FF6A] pb-6 uppercase text-3xl md:text-5xl font-semibold text-center">
+          Who am i ?
+        </h3>
+        <div class="light:text-gray-500 space-y-4 text-center max-w-2xl z-10">
+          <p class="text-sm md:text-base leading-relaxed">
+            I am a System Engineer and Frontend Developer focused on creating
+            modern web interfaces. I specialize in HTML5, CSS3, and Tailwind
+            CSS to build responsive and high-performance digital experiences.
+          </p>
+          <p class="text-sm md:text-base leading-relaxed">
+            Programming is my passion. I merge my engineering background with
+            web development to transform complex logic into clean, efficient
+            code and intuitive user designs.
+          </p>
+          <p class="text-sm md:text-base leading-relaxed">
+            I am a constant learner dedicated to professional innovation,
+            always exploring new technologies to stay at the forefront of the
+            industry.
+          </p>
+        </div>
+        <!-- Usamos absolute para hacer flotar el elemento y controlarlo -->
+        <img
+          class="hidden lg:block absolute -left-1 top-0 w-15 rounded-lg -rotate-19 drop-shadow-[-20px_-20px_50px_rgba(255,255,255,0.5)] z-0 opacity-80"
+          src="./assets/img/foto1.jpg" alt="foto1 personal" />
+        <img
+          class="hidden md:block absolute -left-5 -bottom-1 w-22 rounded-lg rotate-12 drop-shadow-[25px_-20px_50px_rgba(255,255,255,0.5)] z-0 opacity-80"
+          src="./assets/img/foto2.jpg" alt="foto1 personal" />
+        <img
+          class="hidden md:block absolute -right-11 top-1/12 w-22 rounded-lg -rotate-20 drop-shadow-[-20px_-20px_50px_rgba(255,255,255,0.5)] z-0 opacity-80"
+          src="./assets/img/foto3.jpg" alt="foto1 personal" />
+        <button type="submit"
+          class="light:bg-yellow-200 light:text-gray-600 mt-10 z-10 bg-[#E3FF6A] rounded-full px-10 py-3 uppercase text-black font-bold hover:scale-105 transition-transform">
+          <a target="_blank" href="https://github.com/Guadalupe1980">show my projects</a>
+        </button>
+      </article>
+    </section>
+
+    <!-- Seccion de habilidades -->
+    <section class="py-5 px-4">
+      <h3 id="skills" class="light:text-black text-center text-3xl md:text-5xl font-semibold uppercase text-[#E3FF6A] mb-12">
+        My Skills
+      </h3>
+      <div class="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-2 max-w-6xl mx-auto">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-1 w-full max-w-fit">
+          <div
+            class="bg-[#1E293B] light:bg-gray-300 border-2 border-white/10 rounded-xl w-28 h-28 lg:w-32 lg:h-40 flex items-center justify-center p-5 hover:scale-105 transition-transform">
+            <img class="w-16"
+              src="https://imgs.search.brave.com/qPPEXkQNYfY8HgdVH8S5WqNPYl-qfdEsrIRFt-fDVCo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL3ByZW1p/dW0vcG5nLTI1Ni10/aHVtYi9odG1sNS1p/Y29uLXN2Zy1kb3du/bG9hZC1wbmctNTAy/NTI2LnBuZz9mPXdl/YnAmdz0xMjg"
+              alt="Logo de HTML5" />
+          </div>
+          <div
+            class="light:bg-gray-300 bg-[#1E293B] border-2 border-white/10 rounded-2xl w-28 h-28 lg:w-32 lg:h-40 flex items-center justify-center p-5 hover:scale-105 transition-transform">
+            <img class="w-16"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/960px-CSS3_logo.svg.png"
+              alt="Logo de CSS" />
+          </div>
+          <div
+            class="light:bg-gray-300 bg-[#1E293B] border-2 border-white/10 rounded-2xl w-28 h-28 lg:w-32 lg:h-40 flex items-center justify-center p-5 hover:scale-105 transition-transform">
+            <img class="w-20"
+              src="https://imgs.search.brave.com/4ODLwWYy7h8EEQzjOzTrpzFiWpNynz27SB73upo1Fag/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDI3LzEy/Ny80NjMvbm9uXzJ4/L2phdmFzY3JpcHQt/bG9nby1qYXZhc2Ny/aXB0LWljb24tdHJh/bnNwYXJlbnQtZnJl/ZS1wbmcucG5n"
+              alt="Logo de JavaScrip" />
+          </div>
+          <div
+            class="light:bg-gray-300 bg-[#1E293B] border-2 border-white/10 rounded-2xl w-28 h-28 lg:w-32 lg:h-40 flex items-center justify-center p-5 hover:scale-105 transition-transform">
+            <img class="w-16"
+              src="https://upload.wikimedia.org/wikipedia/commons/3/30/React_Logo_SVG.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+              alt="Logo de React" />
+          </div>
+          <div
+            class="light:bg-gray-300 bg-[#1E293B] border-2 border-white/10 rounded-2xl w-28 h-28 lg:w-32 lg:h-40 flex items-center justify-center p-5 hover:scale-105 transition-transform">
+            <img class="w-16"
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+              alt="Logo de Tailwindcss" />
+          </div>
+          <div
+            class="light:bg-gray-300 bg-[#1E293B] border-2 border-white/10 rounded-2xl w-28 h-28 lg:w-32 lg:h-40 flex items-center justify-center p-5 hover:scale-105 transition-transform">
+            <img class="w-16"
+              src="https://imgs.search.brave.com/GV2x2dR-2nik01dh4J7bnEP4p0VkixFqR4gTSNinYf4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LW1vbmdvZGItaWNv/bi1zdmctZG93bmxv/YWQtcG5nLTExNzUx/NDAucG5nP2Y9d2Vi/cCZ3PTEyOA"
+              alt="Logo de Mongodb" />
+          </div>
+          <div
+            class="light:bg-gray-300 bg-[#1E293B] border-2 border-white/10 rounded-2xl w-28 h-28 lg:w-32 lg:h-40 flex items-center justify-center p-5 hover:scale-105 transition-transform">
+            <img class="w-16"
+              src="https://imgs.search.brave.com/IpXCRdkIXGz4WGSQ-SONrnMltGOIibnZjVN9o0QhUoc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LWRqYW5nby1sb2dv/LWljb24tc3ZnLWRv/d25sb2FkLXBuZy0z/MDMxODIxLnBuZz9m/PXdlYnAmdz0xMjg"
+              alt="Logo de Django" />
+          </div>
+          <div
+            class="light:bg-gray-300 bg-[#1E293B] border-2 border-white/10 rounded-2xl w-28 h-28 lg:w-32 lg:h-40 flex items-center justify-center p-5 hover:scale-105 transition-transform">
+            <img class="w-16"
+              src="https://imgs.search.brave.com/rNx5Cfj1GqzGGMUd13Fm1UwG2JpREZeikvqXncrklKg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL3RodW1icy81/ODQ4MTA1N2NlZjEw/MTRjMGI1ZTQ5NTEu/cG5n"
+              alt="Logo de MySQL" />
+          </div>
+        </div>
+
+        <!--Seccion de años de Expriencia-->
+        <div
+          class="light:bg-gray-300 bg-[#1E293B] border-2 border-white/10 rounded-xl p-8 w-full max-w-85 sm:max-w-100 md:max-w-125 lg:w-60 flex flex-col items-center justify-center text-center self-stretch mx-auto lg:mx-0 hover:scale-105 transition-transform">
+          <span class="light:text-gray-700 text-6xl font-bold text-white mb-2">4</span>
+          <p class="light:text-gray-700 text-xl text-white font-semibold mb-6 uppercase tracking-widest leading-tight">
+            Years<br />Experience<br />Working
+          </p>
+          <a href="./Currículum Vitae.pdf" download="CV_Jose_Developer.pdf"
+            class="light:bg-yellow-200 light:text-gray-600 light:hover:bg-white bg-[#E3FF6A] text-black font-bold py-3 px-6 rounded-full uppercase text-xs hover:bg-gray-300 transition-colors inline-flex items-center justify-center">
+            Download my CV
+          </a>
+        </div>
+      </div>
+
+      <!--Apartado de habilidades extras-->
+      <div
+        class="light:bg-gray-300 mt-8 md:mt-15 text-center bg-[#1E293B] border-2 border-white/10 rounded-xl p-8 w-full max-w-85 sm:max-w-100 md:max-w-125 lg:max-w-3xl mx-auto">
+        <h3 class="light:text-black text-[#E3FF6A] text-xl font-semibold mb-6">
+          ADDITIONAL SKILLS
+        </h3>
+        <div class="flex flex-wrap justify-center gap-5 font-medium italic">
+          <img class="w-15 hover:scale-105 transition-transform"
+            src="https://imgs.search.brave.com/rQXpa3YoUKCFRdRXJbUGMf29TPhPHNM2Azr6Q9J6zMA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL3RodW1icy82/MmE3NDc1ZDIyMzM0/M2ZiYzIyMDdjZmYu/cG5n"
+            alt="Logo de Ionic" />
+          <img class="w-15 hover:scale-105 transition-transform"
+            src="https://imgs.search.brave.com/GDM4CbEvzrB_jLgqijHNwPbhpIUtdXqEKiiSVqrOFjU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9ib290c3RyYXAt/NS0xLnN2Zw"
+            alt="Logo de Bootstrap" />
+          <img class="w-15 hover:scale-105 transition-transform"
+            src="https://imgs.search.brave.com/uZeQu0PKSv8d3cLlCPfPeyJGnzI-v4LbrMnz6dys2Xs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDUzLzA2/Ni83OTAvbm9uXzJ4/L2ZyZWUtbG9nby14/YW1wcC1mcmVlLXBu/Zy5wbmc"
+            alt="Logo de XAMPP" />
+          <img class="w-15 hover:scale-105 transition-transform"
+            src="https://imgs.search.brave.com/qYsq0RdL_0t7p5K4eySn8t7FQW-LUz0jYr_a1_oA9tE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9icmFu/ZGxvZ28ub3JnL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzA1/L01pY3Jvc29mdC1Q/b3dlci1BcHBzLUlj/b24tMjAyMC5wbmc"
+            alt="Logo de PowerApps" />
+          <img class="w-15 hover:scale-105 transition-transform"
+            src="https://imgs.search.brave.com/mv5xEr5mKg0d1ZylE8oe29uGoLdX8Qc4Cc2PZNR-Vs8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmdo/ZHByby5jb20vd3At/Y29udGVudC90aGVt/ZXMvcG5naGRwcm8v/ZG93bmxvYWQvc29j/aWFsLW1lZGlhLWFu/ZC1icmFuZHMvbWlj/cm9zb2Z0LXBvd2Vy/LWF1dG9tYXRlLWxv/Z28taWNvbi5wbmc"
+            alt="Logo de Power Automate" />
+          <img class="w-15 hover:scale-105 transition-transform"
+            src="https://imgs.search.brave.com/TqzRTqpZWFNOVeqnb8NAFJxTIAheFaWPSqhN_fJbAmE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZnJlZWJpZXN1cHBs/eS5jb20vbG9nb3Mv/bGFyZ2UvMngvbm9k/ZWpzLTEtbG9nby1z/dmctdmVjdG9yLnN2/Zw"
+            alt="Logo de .Node" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion de proyectos -->
+    <section id="project" class="py-20 px-6">
+      <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
+        <div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-1 mb-10">
+          <h3
+            class="text-5xl md:text-6xl md:w-87.5 lg:text-7xl lg:w-11/12 font-semibold leading-[1.1] tracking-tighter w-64 mb-30 -ml-22">
+            THE WORKS CLOSEST TO MY HEART
+          </h3>
+          <button class=" hover:scale-105 transition-transform">
+            <a target="_blank" href="https://github.com/Guadalupe1980"
+              class="light:bg-yellow-200 light:text-gray-600 text-black font-semibold py-4 px-15 rounded-full bg-[#E3FF6A] uppercase">Show my projects</a>
+          </button>
+        </div>
+        <div class="grid grid-cols-4 gap-3 h-137.5 rounded-xl">
+          <div
+            class="col-span-2 overflow-hidden rounded-xl border-2 border-white/20 hover:scale-105 transition-transform">
+            <img class="w-full h-full object-cover" src="./assets/img/auxiliar.png" alt="Proyecto nombre_proyecto" />
+          </div>
+          <div
+            class="col-span-1 overflow-hidden rounded-xl border-2 border-white/20 hover:scale-105 transition-transform">
+            <img class="w-full h-full object-cover" src="./assets/img/image.png" alt="Proyecto nombre_proyecto" />
+          </div>
+          <div
+            class="col-span-1 overflow-hidden rounded-xl border-2 border-white/20 hover:scale-105 transition-transform">
+            <img class="w-full h-full object-cover" src="./assets/img/profe.png" alt="Proyecto nombre_proyecto" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <form class="max-w-3xl mx-auto px-4">
+      <div class="flex flex-col items-center justify-center bg-white rounded-xl p-8 md:p-14 gap-6 shadow-2xl">
+        <h3 class="text-black font-semibold text-3xl md:text-4xl lg:text-4xl tracking-tight mb-4">
+          LET'S HAVE A CHAT
+        </h3>
+        <input
+          class="bg-[#e5e7eb] rounded-xl md:rounded-2xl p-5 w-full max-w-150 placeholder:text-gray-500 font-semibold outline-none focus:ring-2 focus:ring-[#E3FF6A] transition-all"
+          type="text" name="nombre" id="nombre" placeholder="YOUR NAME" />
+        <input
+          class="bg-[#e5e7eb] rounded-xl md:rounded-2xl p-5 w-full max-w-150 placeholder:text-gray-500 font-semibold outline-none focus:ring-2 focus:ring-[#E3FF6A] transition-all"
+          type="text" name="email" id="email" placeholder="EMAIL ADDRESS" />
+        <textarea role="4"
+          class="bg-[#e5e7eb] resize-none rounded-xl md:rounded-4xl p-5 w-full max-w-150 h-32 placeholder:text-gray-500 font-semibold outline-none focus:ring-2 focus:ring-[#E3FF6A] transition-all"
+          name="sms" id="sms" placeholder="CHAT HERE"></textarea>
+
+        <button type="submit"
+          class="light:bg-yellow-200 light:text-gray-600 w-full max-w-150 text-black bg-[#e3ff6a] font-semibold py-4 md:py-5 rounded-full tracking-widest text-sm hover:scale-105 transition-transform shadow-md">
+          SUBMIT HERE
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <!--Pie de Pagina-->
+  <footer id="forms" class="light:bg-gray-600 bg-[#0a0c10] border-t border-white/10 py-12 px-6 mt-20">
+    <div
+      class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+      <div class="space-y-2">
+        <h4 class="text-white font-bold text-xl tracking-tighter">
+          JOSE GUADALUPE
+        </h4>
+        <p class="text-gray-500 text-sm italic">
+          &copy; 2026 Derechos Reservados
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center md:items-start">
+        <span class="text-gray-400 text-xs uppercase tracking-widest mb-2 font-bold">Recursos</span>
+        <a target="_blank" href="https://fundaciondevalores.org/"
+          class="text-white hover:text-[#E3FF6A] transition-colors font-medium">
+          Formación de Valores
+        </a>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a target="_blank" href="https://www.facebook.com/share/1CbZY5U4SS/"
+          class="group flex items-center gap-2 text-gray-400 hover:text-white transition-all">
+          <i class="fa-brands fa-facebook text-2xl group-hover:text-[#E3FF6A]"></i>
+          <span class="text-sm font-semibold">Facebook</span>
+        </a>
+
+        <a target="_blank" href="https://www.linkedin.com/in/tu-perfil/"
+          class="group flex items-center gap-2 text-gray-400 hover:text-white transition-all">
+          <i class="fa-brands fa-linkedin text-2xl group-hover:text-[#E3FF6A]"></i>
+          <span class="text-sm font-semibold">LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
